@@ -18,7 +18,7 @@ services:
       dockerfile: ./app/Dockerfile
     container_name: fastapi
     stop_signal: SIGKILL
-#    restart: always
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
