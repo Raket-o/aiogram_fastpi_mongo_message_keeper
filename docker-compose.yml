@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  mongo_db:
+    image: mongo:4.4.18
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_db/dump:/mongo_db/dump
+    networks:
+      app_network:
+        ipv4_address: 192.168.55.4
+
+#  tele_bot:
+#    build: .
+#    container_name: tele_bot
+#    depends_on:
+#      - mongo_db
+#    command: ["python", "main.py"]
+#    networks:
+#      app_network:
+#        ipv4_address: 192.168.55.5
+
+networks:
+  app_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.55.0/24
+          gateway: 192.168.55.1
