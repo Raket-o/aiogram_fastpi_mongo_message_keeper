@@ -1,31 +1,31 @@
 version: '3'
 
 services:
-  mongo_db:
-    image: mongo:4.4.18
-    container_name: mongo_db
-    ports:
-      - "27017:27017"
-    volumes:
-      - ./mongo_db/dump:/mongo_db/dump
-    networks:
-      app_network:
-        ipv4_address: 192.168.55.4
-
-  app:
-    build:
-      context: .
-      dockerfile: ./app/Dockerfile
-    container_name: fastapi
-    stop_signal: SIGKILL
-    restart: always
-    ports:
-      - "8000:8000"
-    depends_on:
-      - mongo_db
-    networks:
-      app_network:
-        ipv4_address: 192.168.55.5
+#  mongo_db:
+#    image: mongo:4.4.18
+#    container_name: mongo_db
+#    ports:
+#      - "27017:27017"
+#    volumes:
+#      - ./mongo_db/dump:/mongo_db/dump
+#    networks:
+#      app_network:
+#        ipv4_address: 192.168.55.4
+#
+#  app:
+#    build:
+#      context: .
+#      dockerfile: ./app/Dockerfile
+#    container_name: fastapi
+#    stop_signal: SIGKILL
+#    restart: always
+#    ports:
+#      - "8000:8000"
+#    depends_on:
+#      - mongo_db
+#    networks:
+#      app_network:
+#        ipv4_address: 192.168.55.5
 #
 #  nginx:
 #    container_name: "nginx"
@@ -40,15 +40,17 @@ services:
 #      app_network:
 #        ipv4_address: 192.168.55.6
 
-#  tele_bot:
-#    build: .
-#    container_name: tele_bot
+  aiogram_bot:
+    build:
+      context: .
+      dockerfile: ./aiogram_bot/Dockerfile
+    container_name: aiogram_bot
 #    depends_on:
-#      - mongo_db
+#      - nginx
 #    command: ["python", "main.py"]
-#    networks:
-#      app_network:
-#        ipv4_address: 192.168.55.5
+    networks:
+      app_network:
+        ipv4_address: 192.168.55.7
 
 networks:
   app_network:

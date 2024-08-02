@@ -5,11 +5,8 @@ from contextlib import asynccontextmanager
 import uvicorn
 from fastapi import APIRouter, FastAPI
 
-from pymongo import MongoClient
-
 from app.api.messages import router as messages_router
 from app.database.connect import client
-from config_data.config import MONGO_URI, MONGO_DB_NAME
 
 
 @asynccontextmanager

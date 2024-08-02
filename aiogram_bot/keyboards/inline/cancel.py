@@ -1,4 +1,4 @@
-"""Модуль создания клавиатуры."""
+"""The keyboard creation module."""
 
 from aiogram.types import InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
@@ -6,7 +6,7 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 def cancel_buttons() -> InlineKeyboardMarkup:
     """
-    Функция создания клавиатуры.
+    Keyboard creation function.
     :return: InlineKeyboardMarkup
     """
     keyboard_builder = InlineKeyboardBuilder()

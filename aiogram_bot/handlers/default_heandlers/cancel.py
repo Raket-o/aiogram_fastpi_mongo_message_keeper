@@ -1,17 +1,16 @@
-"""Модуль сброса состояние пользователя."""
+"""User status reset module."""
 
 import logging
 
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, ReplyKeyboardRemove
-
 from handlers.default_heandlers.start import start_command
 
 
 async def cancel_handler_1(message: Message, state: FSMContext) -> None:
     """
-    Функция weekend. Команда /cancel запускает данную функцию.
-    Функция сбрасывает состояние пользователя.
+    The /cancel command starts this function.
+    The function resets the user's status.
     """
     logging.info("cancel_handler")
     await message.message.delete()

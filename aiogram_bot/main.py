@@ -1,4 +1,4 @@
-""" Модуль запуска телеграмм бота."""
+"""The telegram launch module of the bot."""
 
 import asyncio
 
@@ -8,9 +8,13 @@ from aiogram_bot.handlers.routers import register_routers
 from aiogram_bot.loader import bot, dp, on_shutdown, start_up
 from aiogram_bot.utils import logging
 
+# from handlers.routers import register_routers
+# from loader import bot, dp, on_shutdown, start_up
+# from utils import logging
+
 
 async def main(bot: Bot, dp: Dispatcher) -> None:
-    """Функция main. Запускает бота."""
+    """The main function. Launches the bot."""
     dp.startup.register(start_up)
     dp.shutdown.register(on_shutdown)
 

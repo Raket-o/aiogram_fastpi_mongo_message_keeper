@@ -1,4 +1,4 @@
-""" Модуль логгера. Записывает лог с ошибками в ./logs/err.log."""
+"""The logger module. Writes the log to ./logs/."""
 
 import logging
 import os

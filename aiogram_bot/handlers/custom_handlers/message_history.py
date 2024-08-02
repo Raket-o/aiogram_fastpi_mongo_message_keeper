@@ -1,13 +1,7 @@
-"""Модуль обработки создание привычки."""
-
-import datetime
-
+"""The module for processing the output of the message history."""
 from aiogram import types
-from aiogram.fsm.context import FSMContext
 
-from aiogram_bot.handlers.default_heandlers.start import start_command
 from aiogram_bot.keyboards.inline.cancel import cancel_buttons
-from aiogram_bot.states.states import SendMessageState
 from aiogram_bot.utils.api_manager import ApiManager
 
 API_MANAGER = ApiManager()
@@ -16,9 +10,7 @@ API_MANAGER = ApiManager()
 async def message_history_1(
         message: [types.CallbackQuery, types.Message],
 ) -> None:
-    """Функция message_history_1. Отправляет запрос на создание привычки."""
-    await message.message.delete()
-
+    """Displays the message history to the user."""
     status, response = await API_MANAGER.send_get(
         url="api/v1/messages/"
     )
@@ -26,10 +18,10 @@ async def message_history_1(
     if status == 200:
         txt = "Конец списка"
         for message_user in response.get("messages"):
-            print(message_user.get('username'))
-            await message.message.answer(f"""Пользователь: {message_user.get('username')}
-Сообщение: 
-    {message_user.get('message')}""")
+            await message.message.answer(f"""Пользователь: <b>{message_user.get('username')}</b>
+Сообщение:
+    <em>{message_user.get('message')}</em>""",
+                parse_mode="HTML")
     else:
         txt = "Что-то пошло не так. Попробуйте ещё раз"
 

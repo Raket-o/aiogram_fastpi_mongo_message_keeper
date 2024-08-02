@@ -1,9 +1,9 @@
-"""Модуль хранения данных (состояний) пользователя."""
+"""The module for storing user data (states)."""
 
 from aiogram.fsm.state import State, StatesGroup
 
 
 class SendMessageState(StatesGroup):
-    """Класс RegisterUserState. Хранит информацию состояние."""
+    """Class RegisterUserState. Stores status information."""
 
     user_text = State()
