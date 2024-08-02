@@ -4,13 +4,13 @@ from aiogram import F, Router
 from aiogram.filters import Command, CommandStart
 from states.states import SendMessageState
 
-from aiogram_bot.handlers.custom_handlers.message_history import message_history_1
-from aiogram_bot.handlers.custom_handlers.message_send import (
+from handlers.custom_handlers.message_history import message_history_1
+from handlers.custom_handlers.message_send import (
     message_send_1,
     message_send_2,
 )
-from aiogram_bot.handlers.default_heandlers.cancel import cancel_handler_1
-from aiogram_bot.handlers.default_heandlers.start import start_command
+from handlers.default_heandlers.cancel import cancel_handler_1
+from handlers.default_heandlers.start import start_command
 
 
 def register_routers(router: Router):

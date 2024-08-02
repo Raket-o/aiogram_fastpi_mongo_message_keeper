@@ -1,8 +1,8 @@
 """The module for processing the output of the message history."""
 from aiogram import types
 
-from aiogram_bot.keyboards.inline.cancel import cancel_buttons
-from aiogram_bot.utils.api_manager import ApiManager
+from keyboards.inline.cancel import cancel_buttons
+from utils.api_manager import ApiManager
 
 API_MANAGER = ApiManager()
 

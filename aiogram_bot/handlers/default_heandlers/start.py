@@ -1,9 +1,10 @@
 """The command module /start."""
+
 import logging
 
 from aiogram import types
 
-from aiogram_bot.keyboards.inline.greeting import greeting_buttons
+from keyboards.inline.greeting import greeting_buttons
 from config_data.config import START_MESSAGE
 
 start_logger = logging.getLogger(__name__)

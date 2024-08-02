@@ -4,13 +4,9 @@ import asyncio
 
 from aiogram import Bot, Dispatcher
 
-from aiogram_bot.handlers.routers import register_routers
-from aiogram_bot.loader import bot, dp, on_shutdown, start_up
-from aiogram_bot.utils import logging
-
-# from handlers.routers import register_routers
-# from loader import bot, dp, on_shutdown, start_up
-# from utils import logging
+from handlers.routers import register_routers
+from loader import bot, dp, on_shutdown, start_up
+from utils import logging
 
 
 async def main(bot: Bot, dp: Dispatcher) -> None:

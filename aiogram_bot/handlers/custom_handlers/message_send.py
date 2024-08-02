@@ -3,10 +3,10 @@
 from aiogram import types
 from aiogram.fsm.context import FSMContext
 
-from aiogram_bot.handlers.default_heandlers.start import start_command
-from aiogram_bot.keyboards.inline.cancel import cancel_buttons
-from aiogram_bot.states.states import SendMessageState
-from aiogram_bot.utils.api_manager import ApiManager
+from handlers.default_heandlers.start import start_command
+from keyboards.inline.cancel import cancel_buttons
+from states.states import SendMessageState
+from utils.api_manager import ApiManager
 
 API_MANAGER = ApiManager()
 
