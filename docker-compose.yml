@@ -18,7 +18,7 @@ services:
       dockerfile: ./app/Dockerfile
     container_name: fastapi
     stop_signal: SIGKILL
-    restart: always
+#    restart: always
     ports:
       - "8000:8000"
     depends_on:
@@ -50,6 +50,22 @@ services:
     networks:
       app_network:
         ipv4_address: 192.168.55.7
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: unless-stopped
+    volumes:
+      - ./redis/data:/data
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    expose:
+      - 6379
+    command: redis-server /usr/local/etc/redis/redis.conf
+    depends_on:
+      - app
+    networks:
+      app_network:
+        ipv4_address: 192.168.55.8
 
 networks:
   app_network:
