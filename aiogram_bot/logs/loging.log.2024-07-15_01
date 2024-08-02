@@ -1,0 +1,344 @@
+level: INFO | logger: root | time: 2024-07-15 00:57:38,371 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 00:57:38,372 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 00:57:38,456 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 00:58:03,014 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:03,015 | line №: 172 | message: Update id=561892598 is handled. Duration 411 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:04,284 | line №: 172 | message: Update id=561892599 is handled. Duration 197 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:05,484 | line №: 172 | message: Update id=561892600 is handled. Duration 226 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:06,733 | line №: 172 | message: Update id=561892601 is handled. Duration 511 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:08,283 | line №: 172 | message: Update id=561892602 is handled. Duration 211 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:10,266 | line №: 172 | message: Update id=561892603 is handled. Duration 209 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:13,335 | line №: 172 | message: Update id=561892604 is handled. Duration 228 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 00:58:18,626 | line №: 172 | message: Update id=561892605 is not handled. Duration 350 ms by bot id=6006361719
+level: ERROR | logger: aiogram.event | time: 2024-07-15 00:58:18,627 | line №: 315 | message: Cause exception while process update id=561892605 by bot id=6006361719
+ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/users/me/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidGVsZWdyYW1faWQiOjUyMDMwNzMyNDYsImV4cCI6MTcyMDk5MTU4Nn0.L5F8hr00BY9p5bFOZdi_fJMYfHcZ08qhEUNmBzFtdWI')
+Traceback (most recent call last):
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/habit_edit.py", line 57, in edit_name_habit_hand_2
+    await main_menu_hand_1(message)
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/main_menu.py", line 18, in main_menu_hand_1
+    status, response_json = await API_MANAGER.send_get(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/utils/api_manager.py", line 28, in send_get
+    return response.status, await response.json()
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1176, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/users/me/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidGVsZWdyYW1faWQiOjUyMDMwNzMyNDYsImV4cCI6MTcyMDk5MTU4Nn0.L5F8hr00BY9p5bFOZdi_fJMYfHcZ08qhEUNmBzFtdWI')
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-15 01:00:55,684 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:00:55,685 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:00:55,686 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-15 01:00:55,686 | line №: 21 | message: Bot stopped
+level: INFO | logger: root | time: 2024-07-15 01:01:20,656 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:01:20,657 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:01:20,740 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:01:24,840 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:24,842 | line №: 172 | message: Update id=561892606 is handled. Duration 695 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:26,281 | line №: 172 | message: Update id=561892607 is handled. Duration 225 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:27,500 | line №: 172 | message: Update id=561892608 is handled. Duration 194 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:28,783 | line №: 172 | message: Update id=561892609 is not handled. Duration 113 ms by bot id=6006361719
+level: ERROR | logger: aiogram.event | time: 2024-07-15 01:01:28,787 | line №: 315 | message: Cause exception while process update id=561892609 by bot id=6006361719
+ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/auth/token')
+Traceback (most recent call last):
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/login.py", line 42, in login_hand_3
+    status, response = await API_MANAGER.send_post(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/utils/api_manager.py", line 45, in send_post
+    return response.status, await response.json()
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1176, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/auth/token')
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:01:37,908 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:37,911 | line №: 172 | message: Update id=561892610 is handled. Duration 109 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:39,247 | line №: 172 | message: Update id=561892611 is handled. Duration 256 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:40,399 | line №: 172 | message: Update id=561892612 is handled. Duration 200 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:41,341 | line №: 172 | message: Update id=561892613 is not handled. Duration 122 ms by bot id=6006361719
+level: ERROR | logger: aiogram.event | time: 2024-07-15 01:01:41,341 | line №: 315 | message: Cause exception while process update id=561892613 by bot id=6006361719
+ClientConnectorError: Cannot connect to host 192.168.55.5:8000 ssl:default [Connect call failed ('192.168.55.5', 8000)]
+Traceback (most recent call last):
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1025, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1122, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1104, in create_connection
+    sock = await self._connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 1007, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/selector_events.py", line 691, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('192.168.55.5', 8000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/login.py", line 42, in login_hand_3
+    status, response = await API_MANAGER.send_post(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/utils/api_manager.py", line 39, in send_post
+    async with session.post(
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1197, in __aenter__
+    self._resp = await self._coro
+                 ^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/client.py", line 581, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 544, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 944, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1257, in _create_direct_connection
+    raise last_exc
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1226, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1033, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 192.168.55.5:8000 ssl:default [Connect call failed ('192.168.55.5', 8000)]
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:46,747 | line №: 172 | message: Update id=561892614 is handled. Duration 708 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:48,684 | line №: 172 | message: Update id=561892615 is handled. Duration 247 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:50,754 | line №: 172 | message: Update id=561892616 is handled. Duration 294 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:01:55,807 | line №: 172 | message: Update id=561892617 is handled. Duration 195 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:02:00,513 | line №: 172 | message: Update id=561892618 is handled. Duration 386 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:02:02,406 | line №: 172 | message: Update id=561892619 is handled. Duration 328 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:02:03,651 | line №: 172 | message: Update id=561892620 is handled. Duration 217 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:02:04,689 | line №: 172 | message: Update id=561892621 is handled. Duration 215 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:02:06,618 | line №: 172 | message: Update id=561892622 is not handled. Duration 291 ms by bot id=6006361719
+level: ERROR | logger: aiogram.event | time: 2024-07-15 01:02:06,619 | line №: 315 | message: Cause exception while process update id=561892622 by bot id=6006361719
+ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/users/me/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidGVsZWdyYW1faWQiOjUyMDMwNzMyNDYsImV4cCI6MTcyMDk5MTgwNn0.OMqQSALHM4pf8UfS6yH3p4vb7s6LvBFMKDMu9Ayo53c')
+Traceback (most recent call last):
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/habit_edit.py", line 68, in edit_name_habit_hand_2
+    await main_menu_hand_1(message)
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/handlers/custom_handlers/actioins_users/main_menu.py", line 18, in main_menu_hand_1
+    status, response_json = await API_MANAGER.send_get(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/utils/api_manager.py", line 28, in send_get
+    return response.status, await response.json()
+                            ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/comp3/PycharmProjects/habits_fastapi_aiogram/habits_aiogram/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1176, in json
+    raise ContentTypeError(
+aiohttp.client_exceptions.ContentTypeError: 0, message='Attempt to decode JSON with unexpected mimetype: text/plain; charset=utf-8', url=URL('http://192.168.55.5:8000/api/users/me/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidGVsZWdyYW1faWQiOjUyMDMwNzMyNDYsImV4cCI6MTcyMDk5MTgwNn0.OMqQSALHM4pf8UfS6yH3p4vb7s6LvBFMKDMu9Ayo53c')
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-15 01:12:11,276 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:12:11,277 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:12:11,278 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-15 01:12:11,278 | line №: 21 | message: Bot stopped
+level: INFO | logger: root | time: 2024-07-15 01:48:19,487 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:48:19,491 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:48:19,566 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:48:22,890 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:22,890 | line №: 172 | message: Update id=561892623 is handled. Duration 320 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:25,042 | line №: 172 | message: Update id=561892624 is handled. Duration 257 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:28,826 | line №: 172 | message: Update id=561892625 is handled. Duration 282 ms by bot id=6006361719
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:48:30,075 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:30,076 | line №: 172 | message: Update id=561892626 is handled. Duration 337 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:31,358 | line №: 172 | message: Update id=561892627 is handled. Duration 238 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:32,910 | line №: 172 | message: Update id=561892628 is handled. Duration 293 ms by bot id=6006361719
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:48:34,153 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:34,153 | line №: 172 | message: Update id=561892629 is handled. Duration 535 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:35,431 | line №: 172 | message: Update id=561892630 is handled. Duration 198 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:36,662 | line №: 172 | message: Update id=561892631 is handled. Duration 201 ms by bot id=6006361719
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:48:38,252 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:38,252 | line №: 172 | message: Update id=561892632 is handled. Duration 490 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:44,238 | line №: 172 | message: Update id=561892633 is handled. Duration 194 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:45,337 | line №: 172 | message: Update id=561892634 is handled. Duration 215 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:46,649 | line №: 172 | message: Update id=561892635 is handled. Duration 476 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:48,025 | line №: 172 | message: Update id=561892636 is handled. Duration 197 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:50,980 | line №: 172 | message: Update id=561892637 is handled. Duration 200 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:52,398 | line №: 172 | message: Update id=561892638 is handled. Duration 231 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:56,209 | line №: 172 | message: Update id=561892639 is handled. Duration 362 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:57,982 | line №: 172 | message: Update id=561892640 is handled. Duration 238 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:48:59,100 | line №: 172 | message: Update id=561892641 is handled. Duration 214 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:49:00,738 | line №: 172 | message: Update id=561892642 is handled. Duration 337 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:49:03,522 | line №: 172 | message: Update id=561892643 is handled. Duration 377 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:49:46,946 | line №: 172 | message: Update id=561892644 is handled. Duration 347 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:49:48,600 | line №: 172 | message: Update id=561892645 is handled. Duration 180 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:49:49,905 | line №: 172 | message: Update id=561892646 is handled. Duration 209 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:50:44,380 | line №: 172 | message: Update id=561892647 is handled. Duration 530 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:50:46,648 | line №: 172 | message: Update id=561892648 is handled. Duration 197 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:51:09,784 | line №: 172 | message: Update id=561892649 is handled. Duration 353 ms by bot id=6006361719
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:51:11,403 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:51:11,404 | line №: 172 | message: Update id=561892650 is handled. Duration 177 ms by bot id=6006361719
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-15 01:51:17,389 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:51:17,390 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:51:17,390 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-15 01:51:17,390 | line №: 21 | message: Bot stopped
+level: INFO | logger: root | time: 2024-07-15 01:53:05,528 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:05,530 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:05,621 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:53:08,334 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:53:08,334 | line №: 172 | message: Update id=561892651 is handled. Duration 283 ms by bot id=6006361719
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-15 01:53:43,641 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:43,643 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:43,643 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-15 01:53:43,643 | line №: 21 | message: Bot stopped
+level: INFO | logger: root | time: 2024-07-15 01:53:47,088 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:47,090 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:53:47,207 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-15 01:53:48,510 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-15 01:53:48,511 | line №: 172 | message: Update id=561892652 is handled. Duration 339 ms by bot id=6006361719
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-15 01:57:43,565 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:57:43,567 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-15 01:57:43,567 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-15 01:57:43,567 | line №: 21 | message: Bot stopped

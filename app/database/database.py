@@ -4,7 +4,8 @@ from app.database.connect import message_keeper_collection
 def message_helper(message) -> dict:
     return {
         "id": str(message["_id"]),
-        "telegram_id": message["telegram_id"],
+        # "telegram_id": message["telegram_id"],
+        "username": message["username"],
         "message": message["message"],
     }
 

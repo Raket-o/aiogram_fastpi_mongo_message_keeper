@@ -1,0 +1,14 @@
+level: INFO | logger: root | time: 2024-07-16 11:33:25,778 | line №: 16 | message: Bot started
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-16 11:33:25,800 | line №: 527 | message: Start polling
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-16 11:33:25,883 | line №: 341 | message: Run polling for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-16 11:33:32,885 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-16 11:33:32,896 | line №: 172 | message: Update id=561892653 is handled. Duration 349 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-16 11:33:35,115 | line №: 172 | message: Update id=561892654 is handled. Duration 275 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-16 11:33:37,559 | line №: 172 | message: Update id=561892655 is handled. Duration 184 ms by bot id=6006361719
+level: INFO | logger: aiogram.event | time: 2024-07-16 11:33:39,073 | line №: 172 | message: Update id=561892656 is handled. Duration 681 ms by bot id=6006361719
+level: INFO | logger: handlers.default_heandlers.start | time: 2024-07-16 11:33:42,769 | line №: 32 | message: start_logger-UserID=5203073246 Mikhail Sobolev
+level: INFO | logger: aiogram.event | time: 2024-07-16 11:33:42,770 | line №: 172 | message: Update id=561892657 is handled. Duration 376 ms by bot id=6006361719
+level: WARNING | logger: aiogram.dispatcher | time: 2024-07-16 11:33:58,555 | line №: 455 | message: Received SIGINT signal
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-16 11:33:58,556 | line №: 359 | message: Polling stopped for bot @DevTosterBot id=6006361719 - 'TosterBot'
+level: INFO | logger: aiogram.dispatcher | time: 2024-07-16 11:33:58,557 | line №: 554 | message: Polling stopped
+level: INFO | logger: root | time: 2024-07-16 11:33:58,557 | line №: 21 | message: Bot stopped

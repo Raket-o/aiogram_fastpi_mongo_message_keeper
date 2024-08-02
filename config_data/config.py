@@ -11,3 +11,6 @@ else:
 
 MONGO_URI = os.getenv("MONGO_URI")
 MONGO_DB_NAME = os.getenv("MONGO_DB_NAME")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+START_MESSAGE = os.getenv("START_MESSAGE")
+URL_BACKEND_SERVER = os.getenv("URL_BACKEND_SERVER")
