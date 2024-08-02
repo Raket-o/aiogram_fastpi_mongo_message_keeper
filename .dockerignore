@@ -1,3 +1,5 @@
+aiogram_bot/logs
+
 # Git
 .git
 .gitignore
